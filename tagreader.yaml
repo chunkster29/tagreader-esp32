@@ -18,7 +18,7 @@ wifi:
 captive_portal:
 
 dashboard_import:
-  package_import_url: github://adonno/tagreader/tagreader.yaml
+  package_import_url: github://chunkster29/tagreader-esp32/tagreader.yaml
 
 improv_serial:
 
