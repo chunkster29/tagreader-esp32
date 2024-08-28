@@ -5,9 +5,9 @@ wifi:
   password: !secret wifi_password
   manual_ip:
     static_ip:
-      192.168.0.217
+      192.168.1.217
     gateway:
-      192.168.0.1
+      192.168.1.254
     subnet:
       255.255.255.0
 
@@ -65,14 +65,14 @@ switch:
   id: buzzer_enabled
   icon: mdi:volume-high
   optimistic: true
-  restore_state: true
+  restore_mode: ALWAYS_ON
   entity_category: config
 - platform: template
   name: "${friendly_name} LED enabled"
   id: led_enabled
   icon: mdi:alarm-light-outline
   optimistic: true
-  restore_state: true
+  restore_mode: ALWAYS_ON
   entity_category: config
   
 # Define buttons for writing tags via HA 
@@ -228,6 +228,7 @@ api:
 
 # Enable OTA upgrade
 ota:
+  - platform: esphome
 
 i2c:
   scan: False
